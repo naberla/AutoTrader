@@ -22,6 +22,7 @@ class Wrapper(wrapper.EWrapper):
         print("Midpoint. ReqId:", reqId,
               "Time:", datetime.fromtimestamp(time).strftime("%Y%m%d %H:%M:%S"),
               "MidPoint:", midPoint)
+        self.cancelTickByTickData(reqId)
 
 class Client(EClient):
     def __init__(self, wrapper):
@@ -64,6 +65,9 @@ def main():
     
     # Here we call the function that includes the request for market data   
     app.get_marketData(contract)
+    print("Done for round 1")
+    app.get_marketData(contract)
+    print("Done for round 2")
 
 if __name__ == "__main__":
     main()
