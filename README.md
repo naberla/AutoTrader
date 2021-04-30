@@ -1,2 +1,2 @@
 # AutoTrader
-AutoTrade bot using the MACD strategy via Flask based request handling
+AutoTrade bot using various versatile strategies via Flask based request handling
